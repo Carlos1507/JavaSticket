@@ -1,2 +1,2 @@
 # JavaSticket
-Hola este es el proyecto de java uwu
+Hola este es el proyecto de java 
