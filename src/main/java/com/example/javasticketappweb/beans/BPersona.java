@@ -1,18 +1,36 @@
 package com.example.javasticketappweb.beans;
 
+import java.util.Date;
+
 public class BPersona {
     private int idPer;
     private String nombre;
     private int dni;
     private String apellido;
     private int numCel;
-    private String foto;
-    private String fecha_Nc;
+    private int foto;
+    private Date fecha_Nc;
     private String email;
     private String usuario;
     private String contrasenia;
     private String direccion;
     private String rol;
+
+    public Date getFecha_Nc() {
+        return fecha_Nc;
+    }
+
+    public void setFecha_Nc(Date fecha_Nc) {
+        this.fecha_Nc = fecha_Nc;
+    }
+
+    public int getFoto() {
+        return foto;
+    }
+
+    public void setFoto(int foto) {
+        this.foto = foto;
+    }
 
     public BPersona() {
     }
@@ -55,22 +73,6 @@ public class BPersona {
 
     public void setNumCel(int numCel) {
         this.numCel = numCel;
-    }
-
-    public String getFoto() {
-        return this.foto;
-    }
-
-    public void setFoto(String foto) {
-        this.foto = foto;
-    }
-
-    public String getFecha_Nc() {
-        return this.fecha_Nc;
-    }
-
-    public void setFecha_Nc(String fecha_Nc) {
-        this.fecha_Nc = fecha_Nc;
     }
 
     public String getEmail() {
