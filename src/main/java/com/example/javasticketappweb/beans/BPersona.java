@@ -6,13 +6,21 @@ public class BPersona {
     private int dni;
     private String apellido;
     private int numCel;
-    private String foto;
+    private int foto;
     private String fecha_Nc;
     private String email;
     private String usuario;
     private String contrasenia;
     private String direccion;
     private String rol;
+
+    public int getFoto() {
+        return foto;
+    }
+
+    public void setFoto(int foto) {
+        this.foto = foto;
+    }
 
     public BPersona() {
     }
@@ -55,14 +63,6 @@ public class BPersona {
 
     public void setNumCel(int numCel) {
         this.numCel = numCel;
-    }
-
-    public String getFoto() {
-        return this.foto;
-    }
-
-    public void setFoto(String foto) {
-        this.foto = foto;
     }
 
     public String getFecha_Nc() {
