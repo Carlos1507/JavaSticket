@@ -1,12 +1,22 @@
 package com.example.javasticketappweb.beans;
 
+import java.util.Date;
+
 public class BPersonal {
     private int idPersonal;
     private String nombre;
     private String apellido;
     private int grupo;
     private int idSede;
-    private String fecha;
+    private Date fecha;
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
 
     public int getIdPersonal() {
         return idPersonal;
@@ -48,11 +58,4 @@ public class BPersonal {
         this.idSede = idSede;
     }
 
-    public String getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
-    }
 }
