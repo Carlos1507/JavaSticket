@@ -15,6 +15,15 @@ public class BPersona {
     private String contrasenia;
     private String direccion;
     private String rol;
+    private int codigoPUCP;
+
+    public int getCodigoPUCP() {
+        return codigoPUCP;
+    }
+
+    public void setCodigoPUCP(int codigoPUCP) {
+        this.codigoPUCP = codigoPUCP;
+    }
 
     public Date getFecha_Nc() {
         return fecha_Nc;

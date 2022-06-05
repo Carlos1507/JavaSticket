@@ -1,3 +1,5 @@
+<%@ page import="com.example.javasticketappweb.beans.BPersona" %>
+<%@ page import="java.util.ArrayList" %>
 <%--
   Created by IntelliJ IDEA.
   User: stefh
@@ -6,7 +8,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
+<%ArrayList<BPersona> listaCliente=(ArrayList<BPersona>) request.getAttribute("listaCliente");%>
+
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -16,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="a../resources/assets/css/estilos.css">
+    <link rel="stylesheet" href="../resources/assets/css/estilos.css">
     <script src="https://kit.fontawesome.com/5733880de3.js" crossorigin="anonymous"></script>
 
     <STYLE TYPE="text/css">
@@ -246,42 +250,19 @@
             <th>ID</th><th>Nombre</th><th>Apellido</th><th>Codigo PUCP</th><th>Correo PUCP</th><th>Telefono</th><th>Nacimiento</th><th>Distrito</th>
         </tr>
         </thead>
+        <% int i = 1;
+            for (BPersona cliente : listaCliente) { %>
         <tr>
-            <td>12345</td><td>Mario</td><td>Montaneda</td><td>20152014</td><td>ma@pucp.pe</td><td>972241302</td><td>12/12/2012</td><td>Comas</td>
+            <td><%=i %></td>
+            <td><%=cliente.getNombre()%></td>
+            <td><%=cliente.getApellido()%></td>
+            <td><%=cliente.getCodigoPUCP()%></td>
+            <td><%=cliente.getNumCel()%></td>
+            <td><%=cliente.getFecha_Nc()%></td>
+            <td><%=cliente.getDireccion()%></td>
         </tr>
-        <tr>
-            <td>12346</td><td>Rodrigo</td><td>Gonzales</td><td>20120101</td><td>rod@pucp.edu.pe</td><td>999888777</td><td>08/11/1999</td><td>Breña</td>
-        </tr>
-        <tr>
-            <td>12347</td><td>Jex</td><td>Rex</td><td>20062123</td><td>rexugaz@pucp.pe</td><td>972241632</td><td>11/03/2001</td><td>Pueblo Libre</td>
-        </tr>
-        <tr>
-            <td>12349</td><td>Pedro</td><td>Suarez</td><td>20162014</td><td>pedrito@pucp.edu.pe</td><td>985365412</td><td>12/10/2012</td><td>Miraflores</td>
-        </tr>
-        <tr>
-            <td>12389</td><td>Tefy</td><td>Jaramillo</td><td>20102120</td><td>jaramillo@pucp.edu.pe</td><td>978652478</td><td>12/09/2002</td><td>Cercado</td>
-        </tr>
-        <tr>
-            <td>12378</td><td>Joel</td><td>Lopez</td><td>20073189</td><td>lopez_1@pucp.pe</td><td>999888777</td><td>23/09/1998</td><td>Surco</td>
-        </tr>
-        <tr>
-            <td>12393</td><td>Steven</td><td>Strange</td><td>20138796</td><td>drstrange@pucp.pe</td><td>977496357</td><td>15/01/2004</td><td>La Molina</td>
-        </tr>
-        <tr>
-            <td>12789</td><td>Run</td><td>Run</td><td>20056987</td><td>runrun@pucp.pe</td><td>96145231</td><td>01/01/2009</td><td>Comas</td>
-        </tr>
-        <tr>
-            <td>12789</td><td>David</td><td>Beckham</td><td>20121236</td><td>david@pucp.edu.pe</td><td>978654892</td><td>04/02/2010</td><td>Chorrillos</td>
-        </tr>
-        <tr>
-            <td>12789</td><td>Nuria</td><td>Calderon</td><td>20070017</td><td>carrion@pucp.pe</td><td>987654321</td><td>07/12/2008</td><td>Pueblo Libre</td>
-        </tr>
-        <tr>
-            <td>12789</td><td>Enrique</td><td>Uchiha</td><td>20129875</td><td>yujun@pucp.edu.pe</td><td>989241875</td><td>30/02/2008</td><td>San Miguel</td>
-        </tr>
-        <tr>
-            <td>12789</td><td>Carlos</td><td>Carlin</td><td>20151559</td><td>carlitos@pucp.edu.pe</td><td>945108703</td><td>02/02/2002</td><td>Breña</td>
-        </tr>
+        <% i++;
+        } %>
     </table>
 </div>
 
